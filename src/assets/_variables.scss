@@ -1,0 +1,113 @@
+// color palette inspired from https://github.com/vuejs/theme
+$c-white: #ffffff;
+$c-white-soft: #f8f8f8;
+$c-white-mute: #f2f2f2;
+$c-white-opacity: rgba(255, 255, 255, 0.11);
+
+$c-black: #181818;
+$c-black-soft: #222222;
+$c-black-mute: #282828;
+
+$c-text-light-1: $c-black;
+$c-text-light-2: rgba(60, 60, 60, 0.66);
+$c-text-dark-1: $c-white;
+$c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+$c-divider-light-1: rgba(0, 0, 0, 0.12);
+$c-divider-light-2: rgba(0, 0, 0, 0.16);
+$c-divider-dark-1: rgba(255, 255, 255, 0.12);
+$c-divider-dark-2: rgba(255, 255, 255, 0.16);
+
+$c-primary: #621efd;
+$c-primary-mute: #7c3af5;
+$c-primary-soft: #9755fd;
+
+$c-primary-opacity: rgba(98, 30, 253, 0.11);
+$c-primary-opacity-soft: rgba(98, 30, 253, 0.09);
+$c-primary-opacity-mute: rgba(98, 30, 253, 0.05);
+
+$c-secondary: #fd1e59;
+$c-secondary-mute: #ff3875;
+$c-secondary-soft: #ff5291;
+
+
+
+$v-border-width: 1px;
+$v-border-width-small: 0.5px;
+$v-border-width-large: 2px;
+$v-border-style: solid;
+
+$v-border-radius: 10px;
+$v-border-radius-small: 5px;
+$v-border-radius-large: 20px;
+$v-border-radius-circle: 9999px;
+
+
+// variables definition
+$color-background: $c-white;
+$color-background-soft: $c-white-soft;
+$color-background-mute: $c-white-mute;
+
+$color-border: $c-divider-light-2;
+$color-border-hover: $c-divider-light-1;
+
+$color-heading: $c-text-light-1;
+$color-text: $c-text-light-1;
+
+$section-gap: 160px;
+
+// Dark theme variables adjustment
+@mixin dark-theme {
+  $color-background: $c-black;
+  $color-background-soft: $c-black-soft;
+  $color-background-mute: $c-black-mute;
+
+  $color-border: $c-divider-dark-2;
+  $color-border-hover: $c-divider-dark-1;
+
+  $color-heading: $c-text-dark-1;
+  $color-text: $c-text-dark-2;
+}
+
+@media (prefers-color-scheme: dark) {
+  @include dark-theme;
+}
+
+// Theme mixins
+@mixin light-theme {
+  background-color: $c-white;
+  color: $c-text-light-1;
+
+  nav {
+    background-color: $c-white-soft;
+    a {
+      color: $c-text-light-1;
+
+      &:hover {
+        background-color: $c-white-mute;
+      }
+    }
+  }
+}
+
+@mixin dark-theme {
+  background-color: $c-black;
+  color: $c-text-dark-1;
+
+  nav {
+    background-color: $c-black-soft;
+    a {
+      color: $c-text-dark-1;
+
+      &:hover {
+        background-color: $c-black-mute;
+      }
+    }
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
