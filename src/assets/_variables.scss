@@ -31,6 +31,9 @@ $c-secondary-mute: #ff3875;
 $c-secondary-soft: #ff5291;
 
 
+$c-tertiary: #13c2c2;
+$c-tertiary-soft: #7ddad9;
+$c-tertiary-opacity: rgba($c-tertiary, 0.11);
 
 $v-border-width: 1px;
 $v-border-width-small: 0.5px;
@@ -81,6 +84,7 @@ $section-gap: 160px;
 
   nav {
     background-color: $c-white-soft;
+
     a {
       color: $c-text-light-1;
 
@@ -97,6 +101,7 @@ $section-gap: 160px;
 
   nav {
     background-color: $c-black-soft;
+
     a {
       color: $c-text-dark-1;
 

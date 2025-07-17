@@ -67,6 +67,11 @@ const colorClass = computed(() => props.color ? `badge--${props.color}` : '')
   border-color:     $c-secondary-soft;
   color:            $c-secondary;
 }
+.badge--tertiary {
+  background-color: rgba($c-tertiary, 0.11);
+  border-color:     $c-tertiary-soft;
+  color:            $c-tertiary;
+}
 .badge--white {
   background-color: $c-white-opacity;
   border-color:     $c-white-soft;
