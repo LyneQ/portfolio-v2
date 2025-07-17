@@ -11,14 +11,9 @@ const profile = {
     skills: [
         'Go', 'Node.js', 'SvelteKit', 'Vue.js', 'Nuxt.js',
         'React', 'TypeScript', 'JavaScript', 'Drizzle ORM',
-        'Prisma ORM', 'SQLite', 'PostgreSQL', 'Bun', 'Figma',
-        'UI/UX Design', 'VPS Management', 'GORM', 'SMTP (Gomail)',
-        'SCS (Session Management)', 'Linux (Arch linux and debian)',
+        'Prisma ORM', 'SQLite', 'PostgreSQL', 'GORM',
+        'SMTP (Gomail)', 'Linux (Arch linux and debian)',
     ],
-    hardWorker: true,
-    problemSolver: true,
-    aestheticLover: true,
-    yearsOfExperience: 2,
     hireable: function () {
         return (
             this.hardWorker &&
@@ -27,7 +22,6 @@ const profile = {
             this.yearsOfExperience = 1
         );
     },
-    tagline: "Codes like she crafts spells: with precision, flair, and empathy."
 };
 
 `
@@ -36,11 +30,12 @@ const profile = {
 <template>
   <section id="presentation">
     <Who />
-    <WhoCode :code="codeLines" />
+    <WhoCode :code="codeLines" title="developer.js" />
   </section>
 </template>
 
 <style scoped lang="scss">
+@use '@/assets/_variables' as *;
 
 #presentation {
   display: grid;
@@ -48,5 +43,9 @@ const profile = {
   gap: 1rem;
 
   margin: 3rem 2rem;
+
+  @include mobile-display {
+    grid-template-columns: none;
+  }
 }
 </style>

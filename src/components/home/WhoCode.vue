@@ -1,51 +1,40 @@
 <script setup lang="ts">
-import {defineProps, ref} from 'vue'
+import { defineProps, computed, ref, onMounted, watch } from 'vue'
+import Prism from 'prismjs'
+import 'prismjs/components/prism-javascript'
+import '@/assets/prism-atom-dark.css'
 
-defineProps({
-  title: {type: String, default: 'Untitled.js'},
-  code: {type: String, default: ''},
+const props = defineProps({
+  title: { type: String, default: 'Untitled.js' },
+  code:  { type: String, default: '' },
 })
 
 const isMinimized = ref(false)
-const container = ref<HTMLElement | null>(null)
+const container    = ref<HTMLElement|null>(null)
+
+const highlighted = computed(() =>
+    Prism.highlight(props.code, Prism.languages.javascript, 'javascript')
+)
 
 function onMinimize() {
-  isMinimized.value = !isMinimized.value;
-}
-
-
-function onFullscreen() {
-  const el = container.value
-  if (!el) return
-
-  if (!document.fullscreenElement) {
-    el.requestFullscreen()?.catch(() => {
-      console.error('Failed to enter fullscreen');
-    })
-  } else {
-    document.exitFullscreen()?.catch(() => {
-      console.error('Failed to exit fullscreen');
-    })
-  }
+  isMinimized.value = !isMinimized.value
 }
 </script>
 
 <template>
-  <div
-      class="code-window"
-      :class="{ minimized: isMinimized }"
-      ref="container"
-  >
+  <div class="code-window" :class="{ minimized: isMinimized }" ref="container">
     <div class="titlebar">
       <span class="title">{{ title }}</span>
       <div class="window-controls">
         <button class="min-btn" @click="onMinimize">–</button>
-        <button class="fs-btn" @click="onFullscreen">▢</button>
+        <button class="fs-btn"">▢</button>
         <button class="close-btn">×</button>
       </div>
     </div>
     <div class="code-content" v-show="!isMinimized">
-      <pre><code>{{ code }}</code></pre>
+      <pre class="language-javascript">
+        <code v-html="highlighted"></code>
+      </pre>
     </div>
   </div>
 </template>
@@ -56,16 +45,17 @@ function onFullscreen() {
 .code-window {
   display: flex;
   flex-direction: column;
-  border: $v-border-width $v-border-style $color-border;
+  align-items: stretch;
+  border: $v-border-width $v-border-style $c-primary-soft;
   border-radius: $v-border-radius;
   background-color: $color-background;
   color: inherit;
   overflow: hidden;
   max-width: 100%;
+  max-height: 45vh;
 
   @media (prefers-color-scheme: dark) {
     background-color: $c-black;
-    border-color: $c-divider-dark-2;
     color: $c-text-dark-1;
   }
 
@@ -80,11 +70,9 @@ function onFullscreen() {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
-    background-color: $color-background-mute;
-    border-bottom: $v-border-width-small $v-border-style $color-border-hover;
+    background-color: rgba($c-primary-mute, 0.3);
 
     @media (prefers-color-scheme: dark) {
-      background-color: $c-black-mute;
       border-bottom-color: $c-divider-dark-1;
     }
 
@@ -127,23 +115,22 @@ function onFullscreen() {
   }
 
   .code-content {
-    background-color: $color-background-soft;
-    padding: 1rem;
     height: 100%;
     overflow-x: auto;
+    flex: 0 0 auto;
+    max-height: 91%;
 
     pre {
       margin: 0;
+      padding-top: 0;
+      line-height: 1.4;
       font-family: 'Fira Code', monospace;
       font-size: 0.9rem;
+      background-color: #200f3e !important;
 
       code {
         color: inherit;
       }
-    }
-
-    @media (prefers-color-scheme: dark) {
-      background-color: $c-black-soft;
     }
   }
 }
