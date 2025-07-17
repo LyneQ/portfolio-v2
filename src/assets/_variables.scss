@@ -111,3 +111,9 @@ $section-gap: 160px;
     @content;
   }
 }
+
+@mixin mobile-display {
+  @media (max-width: 640px) {
+    @content;
+  }
+}

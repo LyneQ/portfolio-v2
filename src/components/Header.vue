@@ -58,7 +58,7 @@ const isOpen = ref(false);
   font-size: 1rem;
   cursor: pointer;
 
-  @media (max-width: 640px) {
+  @include mobile-display {
     display: inline-flex;
     align-items: center;
   }
