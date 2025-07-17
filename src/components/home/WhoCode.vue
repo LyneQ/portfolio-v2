@@ -27,7 +27,7 @@ function onMinimize() {
       <span class="title">{{ title }}</span>
       <div class="window-controls">
         <button class="min-btn" @click="onMinimize">–</button>
-        <button class="fs-btn"">▢</button>
+        <button class="fs-btn">▢</button>
         <button class="close-btn">×</button>
       </div>
     </div>
@@ -53,6 +53,7 @@ function onMinimize() {
   overflow: hidden;
   max-width: 100%;
   max-height: 45vh;
+  height: fit-content;
 
   @media (prefers-color-scheme: dark) {
     background-color: $c-black;
