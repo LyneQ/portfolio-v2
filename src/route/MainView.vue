@@ -1,9 +1,10 @@
 <script setup lang="ts">
 
+import Who from "@/components/home/Who.vue";
 </script>
 
 <template>
-main
+  <Who />
 </template>
 
 <style scoped lang="scss">
