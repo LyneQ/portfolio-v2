@@ -30,7 +30,7 @@ const profile = {
     <Who/>
     <WhoCode :code="codeLines" title="developer.js"/>
   </section>
-  <section id="presentation-large" style="min-height: 100vh">
+  <section id="presentation-large">
 
   </section>
 </template>
@@ -73,6 +73,14 @@ const profile = {
   }
 }
 #presentation-large {
+  min-height: 100vh;
 
+  background: #111;
+
+  background-image:
+      linear-gradient(to bottom, hsl(252deg 46.84% 15.12%) 0%, #111 20%);
+
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
