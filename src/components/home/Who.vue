@@ -8,14 +8,14 @@ import Badge from "@/components/utils/Badge.vue";
     <div class="who-wrapper">
       <h2>Hi, I'm</h2>
       <h2> <span class="human-name">Lyne Quequin</span></h2>
-      <Badge class="who-btn" text="Passionate Full Stack Developer" />
+      <Badge class="who-btn" text="Passionate Full Stack Developer" style="cursor: text;" />
       <h6>
         Passionate Full-Stack Developer with a strong foundation in modern web technologies and backend systems.
         Quick learner, highly adaptable, and committed to writing clean, maintainable code.
         Thrives in collaborative environments and delivers reliable, scalable solutions.
       </h6>
 
-      <div>
+      <div class="buttons-group">
         <a href="https://github.com/LyneQ" target="_blank" ><Badge class="url-link who-btn" text="Learn more" /> </a>
         <a href="/public/favicon.ico" download><Badge class="url-link who-btn" text="Get resume" /> </a>
       </div>
@@ -92,6 +92,12 @@ a:has(.who-btn) {
   padding: 0.3rem 1rem;
   cursor: pointer;
   font-size: 1rem;
+}
+
+
+.buttons-group {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .absolute{

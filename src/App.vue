@@ -1,6 +1,6 @@
 <template>
   <Header id="header" />
-  <main>
+  <main id="main">
     <RouterView />
   </main>
 </template>
@@ -12,5 +12,10 @@ import Header from "@/components/Header.vue";
 
 #header {
   margin-top: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 </style>
