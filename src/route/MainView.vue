@@ -2,6 +2,7 @@
 
 import Who from "@/components/home/Who.vue";
 import WhoCode from "@/components/home/WhoCode.vue";
+import Presentation from "@/components/home/Presentation.vue";
 
 
 const codeLines = `
@@ -31,7 +32,7 @@ const profile = {
     <WhoCode :code="codeLines" title="developer.js"/>
   </section>
   <section id="presentation-large">
-
+    <Presentation/>
   </section>
 </template>
 
@@ -47,23 +48,11 @@ const profile = {
   padding: 7rem 2rem;
 
   background: #111;
-  background-image: linear-gradient(
-          35deg,
-          hsl(258, 49%, 15%),
-          80%,
-          hsla(252, 67%, 12%, 0.6)
-  ),
-  linear-gradient(
-          transparent calc(50% - 1px),
-          #fff 1px,
-          transparent calc(50% + 1px) 100%
-  ),
-  linear-gradient(
-          to right,
-          transparent calc(50% - 1px),
-          #fff 1px,
-          transparent calc(50% + 1px) 100%
-  );
+  background-image:
+      linear-gradient(35deg, hsl(258deg 39.34% 6.89%), 80%, hsla(252, 67%, 12%, 0.6)),
+      linear-gradient(transparent calc(50% - 1px), #fff 1px, transparent calc(50% + 1px) 100%),
+      linear-gradient(to right, transparent calc(50% - 1px), #fff 1px,
+          transparent calc(50% + 1px) 100%);
   background-size: 100% 100%, 40px 40px, 40px 40px;
 
 
@@ -72,13 +61,14 @@ const profile = {
     padding: 2rem;
   }
 }
+
 #presentation-large {
-  min-height: 100vh;
+  min-height: 60vh;
+  padding: 4rem 0;
 
   background: #111;
 
-  background-image:
-      linear-gradient(to bottom, hsl(252deg 46.84% 15.12%) 0%, #111 20%);
+  background-image: linear-gradient(to bottom, hsl(258deg 39.34% 6.89%) 0%, #111 20%);
 
   background-repeat: no-repeat;
   background-size: cover;
