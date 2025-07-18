@@ -4,8 +4,8 @@
 
 <template>
   <div class="presentation">
-    <img src="https://placeholder.lyneq.tech/450x450?label=picture-of-me">
-    <p>
+      <img src="https://placeholder.lyneq.tech/450x450?label=picture-of-me">
+    <p class="text">
       As a junior full-stack developer, I’m passionate about building modern web applications that are both efficient
       and maintainable. My background includes working with technologies such as TypeScript, Go, Node.js, SvelteKit, and
       modern frontend tools like Tailwind CSS and Vue/Nuxt. I enjoy working across the stack, with a strong focus on
@@ -29,12 +29,30 @@
 <style scoped lang="scss">
 @use "@/assets/variables.scss" as *;
 .presentation {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 4rem;
+  gap: 3rem;
   justify-items: center;
+  justify-content: center;
   color: $c-text-dark-1;
+
+  @include mobile-display {
+    flex-direction: column;
+    padding: 2rem 4rem;
+  }
 }
 
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  width: 40vw;
+
+  @include mobile-display {
+    width: 100%;
+  }
+}
 .embed {
   display: block;
   margin-top: 1rem;
