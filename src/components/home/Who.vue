@@ -8,12 +8,12 @@ import Badge from "@/components/utils/Badge.vue";
     <div class="who-wrapper">
       <h2>Hi, I'm</h2>
       <h2> <span class="human-name">Lyne Quequin</span></h2>
-      <Badge class="who-btn" text="Passionate Full Stack Developer" style="cursor: text;" />
-      <h6>
+      <Badge class="who-btn" text="Passionate Full Stack Developer" style="cursor: text; font-size: 1.5rem" />
+      <p class="who-description">
         Passionate Full-Stack Developer with a strong foundation in modern web technologies and backend systems.
         Quick learner, highly adaptable, and committed to writing clean, maintainable code.
         Thrives in collaborative environments and delivers reliable, scalable solutions.
-      </h6>
+      </p>
 
       <div class="buttons-group">
         <a href="https://github.com/LyneQ" target="_blank" ><Badge class="url-link who-btn" text="Learn more" /> </a>
@@ -51,6 +51,12 @@ import Badge from "@/components/utils/Badge.vue";
   position: relative;
   padding: 2rem 0;
   height: fit-content;
+  width: 40vw;
+
+
+  @include mobile-display {
+    width: 100%;
+  }
 }
 .who-wrapper {
   font-size: 1.5rem;
@@ -58,8 +64,15 @@ import Badge from "@/components/utils/Badge.vue";
   h2, .human-name {
     font-weight: 600;
     line-height: 1;
-    font-size: 3rem;
+    font-size: 4rem;
   }
+}
+
+.who-description {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  width: 75%;
 }
 
 .human-name {

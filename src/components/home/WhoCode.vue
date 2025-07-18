@@ -73,6 +73,12 @@ function onMinimize() {
     padding: 0.5rem 1rem;
     background-color: rgba($c-primary-mute, 0.3);
 
+    min-width: 40vw;
+    width: 100%;
+
+    @include mobile-display{
+      width: 90vw;
+    }
     @media (prefers-color-scheme: dark) {
       border-bottom-color: $c-divider-dark-1;
     }
@@ -117,16 +123,14 @@ function onMinimize() {
 
   .code-content {
     height: 100%;
-    overflow-x: auto;
-    flex: 0 0 auto;
     max-height: 91%;
-
+    overflow: auto;
     pre {
       margin: 0;
       padding-top: 0;
       line-height: 1.4;
       font-family: 'Fira Code', monospace;
-      font-size: 0.9rem;
+      font-size: 1rem;
       background-color: #200f3e !important;
 
       code {

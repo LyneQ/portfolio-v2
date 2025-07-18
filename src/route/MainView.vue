@@ -22,8 +22,8 @@ const profile = {
             this.problemSolver &&
             this.yearsOfExperience = 1
         );
-    }};
-`
+    }
+};`
 </script>
 
 <template>
@@ -42,16 +42,16 @@ const profile = {
 #presentation {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  justify-items: center;
   min-height: 100vh;
 
-  padding: 7rem 2rem;
+  padding: 10rem 2rem 7rem;
 
   background: #111;
   background-image:
       linear-gradient(35deg, hsl(258deg 39.34% 6.89%), 80%, hsla(252, 67%, 12%, 0.6)),
-      linear-gradient(transparent calc(50% - 1px), #fff 1px, transparent calc(50% + 1px) 100%),
-      linear-gradient(to right, transparent calc(50% - 1px), #fff 1px,
+      linear-gradient(transparent calc(50% - 1px), #ffffff4a 1px, transparent calc(50% + 1px) 100%),
+      linear-gradient(to right, transparent calc(50% - 1px), #ffffff4a 1px,
           transparent calc(50% + 1px) 100%);
   background-size: 100% 100%, 40px 40px, 40px 40px;
 
