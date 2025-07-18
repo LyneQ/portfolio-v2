@@ -106,6 +106,7 @@ nav {
     &.open {
       max-height: 500px;
       opacity: 1;
+      backdrop-filter: blur(4px);
     }
 
     a {
