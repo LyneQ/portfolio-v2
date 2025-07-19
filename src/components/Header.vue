@@ -30,9 +30,9 @@ const isOpen = ref(false);
       <RouterLink to="/experience">
         <IconWork /> Experience
       </RouterLink>
-      <RouterLink to="/contact">
-        <IconMail /> Contact
-      </RouterLink>
+<!--      <RouterLink to="/contact">-->
+<!--        <IconMail /> Contact-->
+<!--      </RouterLink>-->
     </nav>
   </div>
 </template>
@@ -57,6 +57,7 @@ const isOpen = ref(false);
   border-radius: $v-border-radius-circle;
   font-size: 1rem;
   cursor: pointer;
+  backdrop-filter: blur(10px);
 
   @include mobile-display {
     display: inline-flex;
@@ -72,6 +73,7 @@ nav {
   width: fit-content;
   margin: 0 auto;
 
+  backdrop-filter: blur(10px);
   background-color: $c-primary-opacity;
   border: $v-border-width-large $v-border-style $c-primary-soft;
   border-radius: $v-border-radius-circle;

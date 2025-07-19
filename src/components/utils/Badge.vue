@@ -14,10 +14,10 @@ const props = defineProps<{
   animate?: boolean
   reverse?: boolean
   color?: string       // "primary", "secondary", "white",
-  IconName?: string
+  iconName?: string
 }>()
 
-const Icon = computed(() => props.IconName ? iconsMap[props.IconName] : null)
+const Icon = computed(() => props.iconName ? iconsMap[props.iconName] : null)
 const colorClass = computed(() => props.color ? `badge--${props.color}` : '')
 </script>
 

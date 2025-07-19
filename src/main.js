@@ -11,7 +11,7 @@ import MainView from "@/route/MainView.vue";
 import ProjectsView from "@/route/ProjectsView.vue";
 import SkillsView from "@/route/SkillsView.vue";
 import ExperienceView from "@/route/ExperienceView.vue";
-import ContactView from "@/route/ContactView.vue";
+// import ContactView from "@/route/ContactView.vue";
 
 // projects definition and initialization
 const routes = [
@@ -19,7 +19,7 @@ const routes = [
     { path: '/projects', component: ProjectsView },
     { path: '/skills', component: SkillsView},
     { path: '/experience', component: ExperienceView},
-    { path: '/contact', component: ContactView},
+    // { path: '/contact', component: ContactView},
 ]
 
 const router = createRouter({

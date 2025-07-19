@@ -11,9 +11,9 @@ const profile = {
     title: 'Full-Stack Developer | UI/UX Explorer | Code with Passion',
     skills: [
         'Go', 'Node.js', 'SvelteKit', 'Vue.js', 'Nuxt.js',
-        'React', 'TypeScript', 'JavaScript', 'Drizzle ORM',
-        'Prisma ORM', 'SQLite', 'PostgreSQL', 'GORM',
-        'SMTP (Gomail)', 'Linux (Arch linux and debian)',
+        'React', 'Next.js', 'TypeScript', 'JavaScript',
+        'Drizzle ORM', 'Prisma ORM', 'SQLite', 'GORM',
+        'SMTP (Gomail)', 'Linux (Arch and debian)',
     ],
     hireable: function () {
         return (
