@@ -55,6 +55,7 @@ const props = withDefaults(defineProps<ProjectCardProps>(), {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: top;
         transition: transform 0.5s ease;
         
         &:hover {

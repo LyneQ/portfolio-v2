@@ -4,7 +4,7 @@ import ProjectCard from "@/components/projects/ProjectCard.vue";
 const projects = [
   {
     title: "Borning-Challenge",
-    imageSrc: "/frontend.svg",
+    imageSrc: "/projects/borning.png",
     imageAlt: "Frontend Development Project",
   },
 ];
