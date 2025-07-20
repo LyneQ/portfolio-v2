@@ -53,6 +53,9 @@ import Badge from "@/components/utils/Badge.vue";
   height: fit-content;
   width: 40vw;
 
+  @media (max-width: 1300px) {
+    width: fit-content;
+  }
 
   @include mobile-display {
     width: 100%;
@@ -60,6 +63,11 @@ import Badge from "@/components/utils/Badge.vue";
 }
 .who-wrapper {
   font-size: 1.5rem;
+
+  @media (max-width: 1300px) {
+    width: 70vw;
+    margin: 0 auto;
+  }
 
   h2, .human-name {
     font-weight: 600;
@@ -126,7 +134,7 @@ a:has(.who-btn) {
   font-size: 1rem;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   .badge:not(.who-btn) { display: none; }
 }
 

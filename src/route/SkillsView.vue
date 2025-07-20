@@ -112,10 +112,9 @@ const devopsSkills = {
 
   .skills-cards {
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 2rem;
     position: absolute;
-    bottom: 20vh;
     left: 0;
     right: 0;
     width: calc(100% - 4rem);

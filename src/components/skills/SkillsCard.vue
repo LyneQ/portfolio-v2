@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps, withDefaults } from 'vue';
 import Badge from "@/components/utils/Badge.vue";
 
 interface BadgeItem {
@@ -99,7 +98,7 @@ const props = withDefaults(defineProps<SkillsCardProps>(), {
 
     &-body {
       display: grid;
-      grid-template-columns: repeat(3, minmax(100px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
       gap: 0.75rem;
       
       @include mobile-display {

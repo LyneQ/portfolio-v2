@@ -27,12 +27,12 @@ const isOpen = ref(false);
       <RouterLink to="/projects">
         <IconCode /> Projects
       </RouterLink>
-      <RouterLink to="/experience">
+<!--      <RouterLink to="/experience">
         <IconWork /> Experience
+      </RouterLink>-->
+      <RouterLink to="/contact">
+        <IconMail /> Contact
       </RouterLink>
-<!--      <RouterLink to="/contact">-->
-<!--        <IconMail /> Contact-->
-<!--      </RouterLink>-->
     </nav>
   </div>
 </template>

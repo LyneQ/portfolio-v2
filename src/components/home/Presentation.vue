@@ -31,10 +31,11 @@
 .presentation {
   display: flex;
   flex-direction: row;
-  padding: 2rem 4rem;
+  flex-wrap: wrap;
   gap: 3rem;
   justify-items: center;
   justify-content: center;
+  padding: 2rem 4rem;
   color: $c-text-dark-1;
 
   @include mobile-display {
@@ -49,7 +50,7 @@
   line-height: 1.5;
   width: 40vw;
 
-  @include mobile-display {
+  @media (max-width: 1000px){
     width: 100%;
   }
 }

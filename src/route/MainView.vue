@@ -56,9 +56,8 @@ const profile = {
   background-size: 100% 100%, 40px 40px, 40px 40px;
 
 
-  @include mobile-display {
+  @media (max-width: 1300px) {
     grid-template-columns: none;
-    padding: 2rem;
   }
 }
 
