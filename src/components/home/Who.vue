@@ -17,7 +17,7 @@ import Badge from "@/components/utils/Badge.vue";
 
       <div class="buttons-group">
         <a href="https://github.com/LyneQ" target="_blank" ><Badge class="url-link who-btn" text="Learn more" /> </a>
-        <a href="/public/favicon.ico" download><Badge class="url-link who-btn" text="Get resume" /> </a>
+       <!-- <a href="/public/resume" download><Badge class="url-link who-btn" text="Get resume" /> </a> -->
       </div>
     </div>
 
