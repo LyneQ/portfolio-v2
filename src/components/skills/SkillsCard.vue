@@ -58,8 +58,7 @@ const props = withDefaults(defineProps<SkillsCardProps>(), {
   .card {
     width: 100%;
     padding: 1.5rem;
-    border-radius: $v-border-radius;
-    background: $c-black-soft;
+    border-radius: $v-border-radius;background: $c-black-soft;
     background-image: linear-gradient(35deg, hsl(258deg 39.34% 6.89%), 80%, hsla(252, 67%, 12%, 0.6));
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     border: $v-border-width $v-border-style $c-divider-dark-1;

@@ -4,7 +4,7 @@
 
 <template>
   <div class="presentation">
-      <img src="https://placeholder.lyneq.tech/450x450?label=picture-of-me">
+      <img src="/lyne.jpg" alt="Lyne Quequin" class="avatar" />
     <p class="text">
       As a junior full-stack developer, I’m passionate about building modern web applications that are both efficient
       and maintainable. My background includes working with technologies such as TypeScript, Go, Node.js, SvelteKit, and
@@ -37,6 +37,11 @@
   justify-content: center;
   padding: 2rem 4rem;
   color: $c-text-dark-1;
+
+  .avatar {
+    width: 500px;
+    object-fit: cover;
+  }
 
   @include mobile-display {
     flex-direction: column;

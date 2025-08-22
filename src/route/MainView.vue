@@ -24,6 +24,7 @@ const profile = {
         );
     }
 };`
+//TODO: correct responsive for <Who/> (media width)
 </script>
 
 <template>
