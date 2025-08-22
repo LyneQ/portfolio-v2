@@ -40,6 +40,7 @@
 
   .avatar {
     width: 500px;
+    max-width: 80vw;
     object-fit: cover;
   }
 
